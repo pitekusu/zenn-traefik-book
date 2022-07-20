@@ -1,0 +1,20 @@
+services:
+  web:
+    build: .
+    restart: always
+    volumes:
+      - type: bind
+        source: "/root/zenn-cli-docker/"
+        target: "/work"
+    labels:
+      traefik.enable: true
+      traefik.http.routers.zenn.rule: Host(`zenn.azunyan.io`)
+      traefik.http.routers.zenn.entrypoints: websecure
+      traefik.http.services.zenn.loadbalancer.server.port: 8000
+      traefik.http.routers.zenn.tls.certresolver: route53
+    networks:
+      - traefik-network
+
+networks:
+  traefik-network:
+    external: true

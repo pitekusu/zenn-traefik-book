@@ -1,0 +1,5 @@
+title: "Traefikマーシャラーになろう"
+summary: "次世代リバースプロキシであるTraefik。HTTPS化、認証、Prometheus連携など便利な機能を解説！"
+topics: ["traefik", "letsencrypt", "route53","docker","prometheus"] # トピック（5つまで）
+published: false # falseだと下書き
+price: 0 # 有料の場合200〜5000
