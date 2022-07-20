@@ -4,7 +4,7 @@ services:
     restart: always
     volumes:
       - type: bind
-        source: "/root/zenn-cli-docker/"
+        source: "/root/zenn-docker/"
         target: "/work"
     labels:
       traefik.enable: true
